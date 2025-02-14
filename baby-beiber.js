@@ -65,10 +65,11 @@ const bieberBaby = [
 const hasYeah = (lyrics) => {
     return lyrics.some((line) => line.toLowerCase().includes('yeah'));
 };
-console.log(hasYeah(bieberBaby));
+//console.log(hasYeah(bieberBaby));
+console.log(hasYeah(bieberBaby.slice(0, 4))); // prints false because first 4
 const numYeahs = (lyrics) => {
     return lyrics
         .map((line) => line.toLowerCase().split('yeah').length - 1)
-        .reduce((a, b) => a + b, 0);
+        .reduce((total, count) => total + count, 0);
 };
 console.log(numYeahs(bieberBaby));
