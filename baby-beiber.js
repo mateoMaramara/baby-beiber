@@ -65,7 +65,7 @@ const bieberBaby = [
 const hasYeah = (lyrics) => {
     return lyrics.some((line) => line.toLowerCase().includes('yeah'));
 };
-//console.log(hasYeah(bieberBaby));
+console.log(hasYeah(bieberBaby));
 console.log(hasYeah(bieberBaby.slice(0, 4))); // prints false because first 4
 const numYeahs = (lyrics) => {
     return lyrics
